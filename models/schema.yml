@@ -1,0 +1,37 @@
+version: 2
+
+models:
+
+    - name: sales
+      description: 
+        this is the sales model
+      tests:
+        - unique:
+            column_name: "(orders_id || '-' || products_id)"
+            
+      columns:
+          - name: orders_id
+            description: 
+              this is the PK
+            tests : 
+            - not_null 
+
+          - name: products_id
+            description: 
+              this is a FK for products table
+            tests:
+              - not_null
+
+          - name: qty
+
+          - name: turnover
+            description: 
+              this is the turnover of the sale
+            tests:
+              - not_null
+
+          - name: purchase_cost
+            tests:
+              - not_null
+
+          - name: margin
