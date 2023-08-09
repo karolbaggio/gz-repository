@@ -35,3 +35,15 @@ models:
               - not_null
 
           - name: margin
+
+    - name: orders
+      description: 
+        this is the orders model
+            
+      columns:
+          - name: orders_id
+            description: 
+              this is the PK
+            tests : 
+            - not_null 
+
